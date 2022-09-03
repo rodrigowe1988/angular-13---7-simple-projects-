@@ -15,7 +15,9 @@ import {
     {{ value }}
     <button (click)="addNumber()">Add</button>
     <button (click)="destroyComponent()">Destroy Component</button>
-    <router-outlet></router-outlet> `,
+    <app-my-first-component></app-my-first-component>
+    <app-data-binding>
+<router-outlet></router-outlet> `,
 })
 export class AppComponent
   implements

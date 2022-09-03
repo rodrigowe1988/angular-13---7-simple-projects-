@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MyFirstComponentComponent } from './components/my-first-component/my-first-component.component';
 import { TitleComponent } from './components/title/title.component';
+import { DataBindingComponent } from './components/data-binding/data-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MyFirstComponentComponent,
-    TitleComponent
+    TitleComponent,
+    DataBindingComponent
   ],
   imports: [
     BrowserModule,

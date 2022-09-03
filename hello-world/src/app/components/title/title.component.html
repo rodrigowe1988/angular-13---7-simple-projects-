@@ -1,3 +1,15 @@
 <h1>
   {{ title }}
 </h1>
+<div *ngIf="imageUrl" ngClass="imgDiv">
+  <img src="{{ imageUrl }}" />
+  <img [src]="imageUrl" alt="Tanjiro" />
+</div>
+<img
+  src="https://popularanime.com.br/wp-content/uploads/2021/12/Demon-Slayer-Tanjiro-1.webp"
+/>
+<button (click)="changeFight()">Tanjiro Fight</button>
+<button (click)="changePeace()">Tanjiro Peace</button>
+<button [disabled]="disabledButton">button disabled test</button>
+
+<br />
