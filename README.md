@@ -1,2 +1,1 @@
-# angular-13---7-simple-projects-
-angular 13 - 7 simple projects 
+# Angular basics to advanced course to improve anyone skills
