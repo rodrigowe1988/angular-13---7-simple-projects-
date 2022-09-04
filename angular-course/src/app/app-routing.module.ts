@@ -7,7 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'dataBinding', component: DataBindingComponent },
-  { path: 'directives', component: DirectivesComponent},
+  { path: 'directives', component: DirectivesComponent },
 ];
 
 @NgModule({

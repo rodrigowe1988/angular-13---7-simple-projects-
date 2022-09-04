@@ -1,2 +1,10 @@
-<app-header></app-header>
+<app-header class="header"></app-header>
 <router-outlet></router-outlet>
+<hr>
+<app-output (sendData)="setData($event)"></app-output>
+<ng-template [ngIf]="getData">
+  <h4>{{ getData.name }}</h4>
+  <h4>{{ getData.age }}</h4>
+</ng-template>
+<hr>
+<app-new-component class="footer"></app-new-component>

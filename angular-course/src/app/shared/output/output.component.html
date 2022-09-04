@@ -1,0 +1,8 @@
+<div class="outputComponent">
+  <ul>
+    <li *ngFor="let item of items; let i = index">
+      [{{ i + 1 }}].{{ item.name }} is {{ item.age }} years old.
+      <button (click)="getData(i)">Get data</button>
+    </li>
+  </ul>
+</div>
