@@ -1,0 +1,83 @@
+<div class="divClass">
+  <h1>Structural directives</h1>
+  <div class="isolatedClass">
+    <h3>*NgIf</h3>
+    <div *ngIf="shaCondition; else elseBlock">
+      <img [src]="imgUrl" [ngStyle]="{ height: '150px' }" />
+      <p>Now you see me, now you...</p>
+    </div>
+    <ng-template #elseBlock>
+      <p>...don't.</p>
+    </ng-template>
+    <button (click)="shacoOnClick()">{{ buttonName }}</button>
+    <p *ngIf="conditionClick">True</p>
+    <p *ngIf="!conditionClick">False</p>
+    <button (click)="handleOnClick()">Click here</button>
+  </div>
+  <div class="isolatedClass">
+    <h3>*NgFor</h3>
+    <ul>
+      <li
+        *ngFor="let item of items; let i = index"
+        (click)="onClickEventItems($event)"
+      >
+        [{{ i + 1 }}]:{{ item.name }}: {{ item.age }} years old.
+        <button (click)="removeItem(i)">X</button>
+      </li>
+    </ul>
+    <button (click)="handleOnClickAdd()">Add to list</button>
+  </div>
+  <div class="isolatedClass">
+    <h3>[NgSwitch]</h3>
+    <input
+      type="text"
+      [(ngModel)]="name"
+      placeholder="type 'rodrigo' or 'rogerio'"
+    />
+    <div [ngSwitch]="name">
+      <p *ngSwitchCase="'rodrigo'">Rodrigo</p>
+      <p *ngSwitchCase="'rogerio'">Rogério</p>
+      <p *ngSwitchDefault>
+        Type <strong>rodrigo</strong> or <strong>rogerio</strong>
+      </p>
+    </div>
+  </div>
+  <div class="isolatedClass">
+    <h1>Attribute directives</h1>
+    <h3>ngClass</h3>
+    <h4 [ngClass]="{ active: value, disabled: !value }">NgClass Directive</h4>
+    <p [ngStyle]="{ color: 'green' }">
+      Green activated / <span [ngStyle]="{ color: 'red' }">Gray disabled</span>
+    </p>
+    <p [ngStyle]="{ 'font-size': fontSize + 'px' }">
+      Change de size (in pixels) of an element
+    </p>
+    <button (click)="handleUpSize()">Increase</button>
+    <button (click)="handleDownSize()">Decrease</button>
+  </div>
+  <div class="isolatedClass">
+    <h3>[(ngModel)]</h3>
+    <input [(ngModel)]="newName" />
+    <p>{{ newName }}</p>
+    <button (click)="saveElement()">Save</button>
+    <ul>
+      <li *ngFor="let item of list">{{ item.name }}</li>
+    </ul>
+  </div>
+  <div class="isolatedClass">
+    <h3>ng-template</h3>
+    <ng-template ngFor let-item [ngForOf]="list">
+      <p>{{ item.name | uppercase }}</p>
+    </ng-template>
+    <input [(ngModel)]="ngTemplateName" />
+    <button (click)="saveElementTemplate()">Save</button>
+  </div>
+  <div class="isolatedClass">
+    <h3>ng-content</h3>
+    <ng-content select="h1"></ng-content>
+  </div>
+  <div class="isolatedClass">
+    <h3>Pipes</h3>
+    {{ date | date:'short'}}
+  </div>
+</div>

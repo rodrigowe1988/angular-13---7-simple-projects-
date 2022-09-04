@@ -1,6 +1,6 @@
 <div class="divClass">
   <h1>Data Binding class</h1>
-  <div class="isolateClass">
+  <div class="isolatedClass">
     <h3>Interpolation</h3>
     <p>
       <strong>{{ test }}</strong>
@@ -13,20 +13,20 @@
       I'm older than 30? <strong>{{ age > 30 }}</strong>
     </p>
   </div>
-  <div class="isolateClass">
+  <div class="isolatedClass">
     <h3>Property Binding</h3>
     <button [disabled]="checkedDisabled">Button disabled</button>
     <img [src]="imgUrl" alt="{{ angularicon }}" />
     <br />
   </div>
-  <div class="isolateClass">
+  <div class="isolatedClass">
     <h3>Event Binding</h3>
     <button (click)="alertInfo($event)">{{ button }}</button>
 	 <span>X: {{ positionX }} Y: {{ positionY }}</span>
     <div [class]="classes[divClass]" (mousemove)="mouseMoveTest($event)">
     </div>
   </div>
-  <div class="isolateClass">
+  <div class="isolatedClass">
     <h3>Two-way Binding</h3>
 	 <input [(ngModel)]="name">
 	 {{name}}
