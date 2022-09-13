@@ -8,18 +8,19 @@ import { Food } from '../Food';
   styleUrls: ['./food-list.component.scss'],
 })
 export class FoodListComponent implements OnInit {
-  public foodList: Array<Food> | any;
+  public foodList: Array<Food> = [];
 
   constructor(private foodListService: FoodListService) {}
 
   ngOnInit(): void {
-    this.foodListService.foodList().subscribe(
-      (res) => this.foodList = res,
-      //(error) => error
-    );
+    this.foodListService.foodList().subscribe({
+      next: (res) => (this.foodList = res),
+      error: (error) => console.log(error),
+    });
 
-    this.foodListService.emitEvent.subscribe((res) =>
-      alert(`Olha, você adicionou o elemento => ${res}`)
-    );
+    this.foodListService.emitEvent.subscribe((res) => {
+      alert(`Você adicionou o elemento => ${res}`);
+      return this.foodList.push(res);
+    });
   }
 }

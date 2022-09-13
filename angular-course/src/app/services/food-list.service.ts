@@ -13,19 +13,21 @@ export class FoodListService {
 
   constructor(private http: HttpClient) {}
 
-  public foodList(): Observable<Food> {
-    return this.http.get<Food>(`${this.url}/food`).pipe(
+  public foodList(): Observable<Array<Food>> {
+    return this.http.get<Array<Food>>(`${this.url}/food`).pipe(
       (res) => res,
       (error) => error
     );
   }
 
-  public foodListAdd(value: string): void {
-    this.foodListAlert(value);
-    //this.list.push(value);
+  public foodListAlert(value: Food) {
+    return this.emitEvent.emit(value);
   }
 
-  public foodListAlert(value: string) {
-    return this.emitEvent.emit(value);
+  public foodListAdd(value: string): Observable<Food> {
+    return this.http.post<Food>(`${this.url}/food`, { nome: value }).pipe(
+      (res) => res,
+      (error) => error
+    );
   }
 }
