@@ -9,6 +9,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { SharedModule } from './shared/shared.module';
+import { FoodModule } from './food/food.module';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,14 @@ import { SharedModule } from './shared/shared.module';
     DataBindingComponent,
     HomeComponent,
     HeaderComponent,
-    DirectivesComponent
+    DirectivesComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    FoodModule
   ],
   providers: [],
   bootstrap: [AppComponent]
