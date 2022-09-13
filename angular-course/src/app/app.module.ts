@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { DirectivesComponent } from './components/directives/directives.component';
 import { SharedModule } from './shared/shared.module';
 import { FoodModule } from './food/food.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,10 @@ import { FoodModule } from './food/food.module';
     AppRoutingModule,
     FormsModule,
     SharedModule,
-    FoodModule
+    FoodModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

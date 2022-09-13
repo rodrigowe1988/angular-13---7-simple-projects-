@@ -1,0 +1,20 @@
+{
+	"food": [
+    {
+      "id": 1,
+      "nome": "pizza"
+    },
+    {
+      "id": 2,
+      "nome": "lasanha"
+    },
+    {
+      "id": 3,
+      "nome": "prato feito"
+    },
+    {
+      "id": 4,
+      "nome": "galinhada"
+    }
+  ]
+}

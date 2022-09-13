@@ -4,6 +4,7 @@ import { AllFoodComponentsComponent } from './all-food-components/all-food-compo
 import { FoodAddComponent } from './food-add/food-add.component';
 import { FoodListComponent } from './food-list/food-list.component';
 
+
 @NgModule({
   declarations: [
     AllFoodComponentsComponent,
