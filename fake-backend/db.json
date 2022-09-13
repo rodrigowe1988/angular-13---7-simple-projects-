@@ -1,44 +1,16 @@
 {
   "food": [
     {
-      "id": 1,
-      "nome": "pizza"
+      "nome": "lasanha",
+      "id": 2
     },
     {
-      "id": 2,
-      "nome": "lasanha"
+      "nome": "prato feito",
+      "id": 3
     },
     {
-      "id": 3,
-      "nome": "prato feito"
-    },
-    {
-      "id": 4,
-      "nome": "galinhada"
-    },
-    {
-      "nome": "comida5",
-      "id": 5
-    },
-    {
-      "nome": "comida6",
-      "id": 6
-    },
-    {
-      "nome": "comida7",
-      "id": 7
-    },
-    {
-      "nome": "comida8",
-      "id": 8
-    },
-    {
-      "nome": "comida8",
-      "id": 9
-    },
-    {
-      "nome": "comida9",
-      "id": 10
+      "nome": "feijoada",
+      "id": 4
     }
   ]
 }
